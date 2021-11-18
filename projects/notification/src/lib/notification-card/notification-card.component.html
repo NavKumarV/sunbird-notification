@@ -14,7 +14,7 @@
       <img [src]="notification?.data?.actionData?.thumbnail" width="20px">
     </div>
     <div class="ml-12 notification-content">
-      <div class="title" *ngIf="notification?.action?.template?.data?.title" [ngClass]="{'active': notification?.status === NotificationStatus.UNREAD}">{{notification?.action?.template?.data?.title}}</div>
+      <div class="title" *ngIf="notification?.data?.actionData?.title" [ngClass]="{'active': notification?.status === NotificationStatus.UNREAD}">{{notification?.data?.actionData?.title}}</div>
       <div class="sub-title py-8" *ngIf="notification?.data?.actionData?.description">{{notification?.data?.actionData?.description}}</div>
     </div>
   </div>

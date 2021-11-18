@@ -2,13 +2,13 @@ import { EventNotification, Notification, NotificationFeedEntry } from "./models
 
 export interface SbNotificationService {
 
-  fetchNotificationList(): Promise<any>;
-  
-  handleNotificationClick(notificationData: any): void;
-  
-  deleteNotification(notificationData: any): Promise<boolean>;
-  
-  clearAllNotifications(notificationListData: any): Promise<boolean>;
+  fetchNotificationList(): Promise<NotificationFeedEntry<Notification|any>[]>;
+
+  handleNotificationClick(notificationData: EventNotification): void;
+
+  deleteNotification(notificationData: EventNotification): Promise<boolean>;
+
+  clearAllNotifications(notificationListData: EventNotification): Promise<boolean>;
 
 }
 

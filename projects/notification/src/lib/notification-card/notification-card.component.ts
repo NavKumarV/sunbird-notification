@@ -10,7 +10,7 @@ import { SbNotificationService } from '../notification.service';
 })
 export class NotificationCardComponent implements OnChanges {
 
-  @Input() notification = notificationData;
+  @Input() notification: NotificationFeedEntry<Notification | any> = notificationData;
   @Input() hideDeleteOption: boolean;
 
   @Output() notificationClick: EventEmitter<any> = new EventEmitter();

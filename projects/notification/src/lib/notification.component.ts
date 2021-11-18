@@ -32,14 +32,6 @@ export class NotificationComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.notificationList) {
       this.notificationList = changes.notificationList.currentValue;
-      this.notificationList.forEach((e: any)=> {
-       try {
-        if (e.action.template.type === 'JSON') {
-          e.action.template.data = JSON.parse(e.action.template.data) 
-        }} catch (e) { 
-           console.log('error', e);
-        }
-      });
     }
 
     if (changes.inAppNotificationConfig) {
